@@ -1,0 +1,16 @@
+<view class="flex flex-col h-screen" hover-class="none" hover-stop-propagation="false">
+  <view>
+    <home wx:if="{{currentTab === 'home'}}" />
+    <logs wx:if="{{currentTab === 'logs'}}" />
+  </view>
+  <!-- Bottom tab -->
+  <view class="cu-bar foot tab-container" style="padding-bottom: {{navigationBarHeight > 0 ? (navigationBarHeight + 8) : 20}}rpx;">
+    <block wx:for="{{tabs}}" wx:key="id">
+      <view bindtap="onTabSelect" class="{{currentTab === item.id ? 'tab-highlight' : 'tab'}} flex" data-tabid="{{item.id}}">
+        <image class="tab-icon" wx:if="{{currentTab === item.id}}" src="{{item.iconActive}}" />
+        <image class="tab-icon" wx:else src="{{item.icon}}" />
+        <view class="margin-left-xs tab-text">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

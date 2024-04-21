@@ -1,0 +1,6 @@
+{
+  "projectname": "miniprogram-template",
+  "setting": {
+    "compileHotReLoad": true
+  }
+}

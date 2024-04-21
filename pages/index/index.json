@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "home": "/components/home/home",
+    "logs": "/components/logs/logs"
+  }
+}
